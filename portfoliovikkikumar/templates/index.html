@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikki Kumar | Python Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Vikki<span>Kumar</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-cta">Hire Me</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg hero-bg-one"></div>
+            <div class="hero-bg hero-bg-two"></div>
+
+            <div class="hero-content">
+                <p class="eyebrow">Premium Web Development Portfolio</p>
+                <h1>Hi, I am <span>Vikki Kumar</span></h1>
+                <p class="hero-text">
+                    I build modern Django websites, Python backends, and complete full stack web applications
+                    with clean design, strong performance, and business-ready features.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Start Project</a>
+                    <a href="#about" class="btn btn-secondary">View Services</a>
+                    <a href="{{ url_for('static', filename='files/resume.jpg') }}" class="btn btn-secondary" target="_blank">My Resume</a>
+                </div>
+            </div>
+
+            <div class="hero-card" aria-label="Developer service card">
+                <div class="card-topline"></div>
+                <div class="profile-ring">
+                    <span>VK</span>
+                </div>
+                <h2>Python Full Stack</h2>
+                <p>Django web development, APIs, dashboards, ecommerce, and custom web apps.</p>
+
+                <div class="skill-list">
+                    <span>Django</span>
+                    <span>Python</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">About Us</p>
+                <h2>Smart websites built with clean code and premium design.</h2>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">01</div>
+                    <h3>Django Web Development</h3>
+                    <p>Secure, scalable, and dynamic websites using Django, databases, authentication, admin panels, and custom features.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">02</div>
+                    <h3>Python Full Stack</h3>
+                    <p>Complete frontend and backend solutions with Python logic, responsive pages, APIs, and deployment-ready structure.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">03</div>
+                    <h3>Business Web Apps</h3>
+                    <p>Portfolio sites, ecommerce stores, dashboards, booking systems, and custom tools made for real-world use.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="contact-copy">
+                <p class="eyebrow">Contact Us</p>
+                <h2>Have a project idea?</h2>
+                <p>Let us create a fast, animated, premium website for your business or personal brand.</p>
+
+                <a href="tel:+917352192513" class="contact-number">+91 7352192513</a>
+
+                <div class="contact-points">
+                    <span>Fast response</span>
+                    <span>Clean code</span>
+                    <span>Premium design</span>
+                </div>
+            </div>
+
+            <form class="contact-form" action="/contact"  method="POST" enctype="application/x-www-form-urlencoded">
+                <div class="form-row">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="service" >Service</label>
+                    <select id="service" name="service" required >
+                        <div class="div row" style="color: #000000;">
+                        <option value="">Choose service</option>
+                        <option value="Django Web Development">Django Web Development</option>
+                        <option value="Python Full Stack">Python Full Stack</option>
+                        <option value="Business Web App">Business Web App</option>
+                        </div>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Project Details</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <a href="#home" class="logo">Vikki<span>Kumar</span></a>
+            <p>Django web development and Python full stack solutions with premium design.</p>
+        </div>
+
+        <div class="footer-contact">
+            <p>Contact Us</p>
+            <a href="tel:+917352192513">+91 7352192513</a>
+        </div>
+
+        <div class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="X">X</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="GitHub">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
